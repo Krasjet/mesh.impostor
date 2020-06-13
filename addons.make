@@ -1,4 +1,1 @@
-ofxGui
-ofxPoco
-ofxVideoRecorder
 ofxMeshGen
