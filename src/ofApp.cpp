@@ -35,7 +35,6 @@ void ofApp::draw()
   ofBackground(ofFloatColor(bgDark ? 0 : 1));
 
   ofEnableDepthTest();
-
   ofPushMatrix();
   cam.begin();
 
@@ -47,7 +46,6 @@ void ofApp::draw()
   mesh.drawWireframe();
 
   cam.end();
-
   ofPopMatrix();
   ofDisableDepthTest();
 }

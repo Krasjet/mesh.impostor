@@ -1,6 +1,5 @@
 #pragma once
 
-#include <cmath>
 #include "math/ofMath.h"
 
 float step4d(float x, float y, float z, float w){
