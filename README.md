@@ -1,5 +1,5 @@
 mesh.impostor
--------------
+=============
 
 ![](https://krasjet.com/eidos/mesh.impostor/imgs/impostor1.png)
 
