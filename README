@@ -1,0 +1,7 @@
+mesh.impostor
+=============
+
+Note that ofxMeshGen [1] needs to be present in the `addon` directory to build
+this project.
+
+[1]: https://github.com/Krasjet/ofxMeshGen
