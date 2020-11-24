@@ -1,7 +1,14 @@
 mesh.impostor
 =============
 
-Note that ofxMeshGen [1] needs to be present in the `addon` directory to build
+Clone into `apps/myApps` directory then use
+
+    $ make run
+
+to build the project. See [1] for details.
+
+Note that ofxMeshGen [2] needs to be present in the `addon` directory to build
 this project.
 
-[1]: https://github.com/Krasjet/ofxMeshGen
+[1]: https://openframeworks.cc/ofBook/chapters/setup_and_project_structure.html
+[2]: https://github.com/Krasjet/ofxMeshGen

@@ -24,7 +24,8 @@ void ofApp::update()
 {
   for (size_t i = 0; i < std::min(mesh.getNumVertices(), impostor.getNumVertices()); ++i) {
     const ofVec3f &normal = impostor.getNormal(i), pos = impostor.getVertex(i);
-    float scaling = amplitude * step4d(0.1f * pos.x, 0.1f * pos.y, 0.1f * pos.z, ofGetElapsedTimef());
+    float scaling = amplitude *
+      step4d(0.1f * pos.x, 0.1f * pos.y, 0.1f * pos.z, ofGetElapsedTimef());
     mesh.setVertex(i, pos + scaling * normal);
   }
   recalcNormals(mesh);
@@ -53,41 +54,41 @@ void ofApp::draw()
 void ofApp::keyPressed(int key)
 {
   switch (key) {
-    case 'x':
-      screenshot.grabScreen(0, 0, ofGetWidth(), ofGetHeight());
-      screenshot.save("screenshot_" + ofGetTimestampString() + ".png");
-      break;
-    case '+':
-      amplitude += 0.1;
-      break;
-    case '=':
-      amplitude = 0;
-      break;
-    case '-':
-      amplitude -= 0.1;
-      break;
-    case 'd':
-      dark = !dark;
-      break;
-    case 'D':
-      bgDark = !bgDark;
-      break;
-    case '0':
-      cam.setPosition(glm::vec3(CAM_COORD));
-      cam.lookAt({0, 0, 0});
-      break;
-    case '1':
-      cam.setPosition(glm::vec3(CAM_COORD) / 1.3);
-      cam.lookAt({0, 0, 0});
-      break;
-    case '2':
-      cam.setPosition(glm::vec3(CAM_COORD));
-      cam.move(0, -35, 0);
-      cam.rotateAroundDeg(-15, {0, 1, 0}, {0, 0, 0});
-      cam.lookAt({0, 0, 0});
-      break;
-    default:
-      break;
+  case 'x':
+    screenshot.grabScreen(0, 0, ofGetWidth(), ofGetHeight());
+    screenshot.save("screenshot_" + ofGetTimestampString() + ".png");
+    break;
+  case '+':
+    amplitude += 0.1;
+    break;
+  case '=':
+    amplitude = 0;
+    break;
+  case '-':
+    amplitude -= 0.1;
+    break;
+  case 'd':
+    dark = !dark;
+    break;
+  case 'D':
+    bgDark = !bgDark;
+    break;
+  case '0':
+    cam.setPosition(glm::vec3(CAM_COORD));
+    cam.lookAt({0, 0, 0});
+    break;
+  case '1':
+    cam.setPosition(glm::vec3(CAM_COORD) / 1.3);
+    cam.lookAt({0, 0, 0});
+    break;
+  case '2':
+    cam.setPosition(glm::vec3(CAM_COORD));
+    cam.move(0, -35, 0);
+    cam.rotateAroundDeg(-15, {0, 1, 0}, {0, 0, 0});
+    cam.lookAt({0, 0, 0});
+    break;
+  default:
+    break;
   }
 };
 
